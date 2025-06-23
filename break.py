@@ -264,7 +264,7 @@ class AudioProcessor:
                 top_peaks_idx = np.argsort(peak_heights)[-n_peaks:]
                 peaks = peaks[top_peaks_idx]
             
-            # Pad if we don't have enough peaks
+            # Pad if we don't have enough peaksasd
             if len(peaks) < n_peaks:
                 peaks = np.pad(peaks, (0, n_peaks - len(peaks)), 'constant', constant_values=0)
             
